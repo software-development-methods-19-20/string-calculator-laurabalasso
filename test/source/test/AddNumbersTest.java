@@ -44,4 +44,9 @@ public class AddNumbersTest {
     void checkNegatives() {
         assertThat(StringCalculator.add("1,2,-3"), is(0));
     }
+
+    @Test
+    void overThousandValues() {
+        assertThat(StringCalculator.add("1,2,1001"), is(3));
+    }
 }

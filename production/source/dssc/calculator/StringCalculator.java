@@ -34,7 +34,8 @@ public class StringCalculator {
             checkForNegatives(tokens);
             int tot = 0;
             for(String num : tokens){
-                tot += Integer.valueOf(num);
+                Integer val = Integer.valueOf(num);
+                if(val <= 1000) tot += val;
             }
             return tot;
         }
