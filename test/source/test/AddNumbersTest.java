@@ -24,4 +24,14 @@ public class AddNumbersTest {
     void twoNumbers() {
         assertThat(StringCalculator.add("1,2"), is(3));
     }
+
+    @Test
+    void fiveNumbers() {
+        assertThat(StringCalculator.add("1,2,3,4,5"), is(15));
+    }
+
+    @Test
+    void newLineSeparator() {
+        assertThat(StringCalculator.add("1,2\n3"), is(6));
+    }
 }
