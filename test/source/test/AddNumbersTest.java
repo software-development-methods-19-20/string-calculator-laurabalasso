@@ -34,4 +34,14 @@ public class AddNumbersTest {
     void newLineSeparator() {
         assertThat(StringCalculator.add("1,2\n3"), is(6));
     }
+
+    @Test
+    void changeDelimiter() {
+        assertThat(StringCalculator.add("//;\n1;2;3"), is(6));
+    }
+
+    @Test
+    void checkNegatives() {
+        assertThat(StringCalculator.add("1,2,-3"), is(0));
+    }
 }
